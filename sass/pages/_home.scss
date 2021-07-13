@@ -1,0 +1,90 @@
+.top-header {
+    background: lightblue;
+
+    &__greeting {
+        max-width: 75rem;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+
+        h1 {
+            margin: 0;
+        }
+    }
+}
+
+
+
+.section-about {
+    padding-top: 1.25rem;
+    padding-bottom: 80px;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 75rem;
+        margin: 0 auto;
+
+        > header {
+            width: 100%;
+            padding-left: 1.25rem;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+        }
+    }
+}
+
+.section-projects {
+    
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 1.25rem;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1.25rem;
+        max-width: 75rem;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+
+        @include breakpoint(700px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    
+        @include breakpoint(1100px) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));    
+        }
+    }
+}
+
+.section-contact {
+    padding-top: 1.25rem;
+
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 1.25rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 75rem;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+    }
+}
+
+.footer {
+    background: darkgray;
+
+    &__copyright {
+        max-width: 75rem;
+        margin: 0 auto;
+        padding: .5rem 0 .5rem 1.25rem;
+    }
+}

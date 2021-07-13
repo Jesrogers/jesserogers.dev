@@ -1,0 +1,38 @@
+.card {
+    box-shadow: 0 0.65rem 1rem rgba(0, 0, 0, 0.15);
+    margin-bottom: 2.50rem;
+
+    img {
+        height: 12.5rem;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 1.5rem 1rem;
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            display: flex;
+            margin-top: 1rem;
+
+            a {
+                flex: 0 0 50%;
+                display: inline-block;
+                padding: 1rem 1.5rem;
+                text-align: center;
+                text-decoration: none;
+                color: $color-white;
+                background: lightgreen;
+                border-radius: 1.25rem;
+
+                &:not(:last-child) {
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}
