@@ -1,53 +1,101 @@
 .top-header {
-    background: lightblue;
+    background: $color-primary;
 
     &__greeting {
-        max-width: 75rem;
+        max-width: $content-width;
         margin: 0 auto;
         padding: 0 1.25rem;
+        color: $color-white;
+        text-align: center;
 
-        h1 {
-            margin: 0;
+        @include breakpoint(700px) {
+            text-align: initial;
         }
+    }
+
+    &__name {
+        display: inline-block;
     }
 }
 
-
-
 .section-about {
-    padding-top: 1.25rem;
-    padding-bottom: 80px;
+    padding-top: 2.5rem;
+    padding-bottom: 1.25rem;
 
     &__content {
         display: flex;
         flex-wrap: wrap;
-        max-width: 75rem;
+        max-width: $content-width;
         margin: 0 auto;
 
-        > header {
+        p {
+            margin-bottom: 1em;
+
+            &:last-of-type {
+                padding-bottom: 1em;
+            }
+        }
+    }
+
+    &__photo {
+        display: inline-block;
+        width: 15.625rem;
+        height: 15.625rem;
+
+        img {
             width: 100%;
-            padding-left: 1.25rem;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
-        p {
-            margin-bottom: 1.25rem;
+    }
+
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.5em;
+        border-radius: 50%;
+        fill: $color-secondary;
+        border: 0.125rem solid $color-secondary;
+        transition: .3s all;
+        
+        &:not(:last-child) {
+            margin-right: .5em;
+        }
+
+        &:hover {
+            fill: $color-white;
+            background: $color-secondary;
         }
     }
 }
 
 .section-projects {
+    padding: 3.75rem 0;
+    background: $s1;
     
-    h2 {
+    &__header {
         text-align: center;
         font-size: 3rem;
-        margin-bottom: 1.25rem;
+        margin-bottom: .5em;
     }
 
     &__content {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
         grid-gap: 1.25rem;
-        max-width: 75rem;
+        max-width: $content-width;
         margin: 0 auto;
         padding: 0 1.25rem;
 
@@ -61,30 +109,13 @@
     }
 }
 
-.section-contact {
-    padding-top: 1.25rem;
-
-    h2 {
-        text-align: center;
-        font-size: 3rem;
-        margin-bottom: 1.25rem;
-    }
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        max-width: 75rem;
-        margin: 0 auto;
-        padding: 0 1.25rem;
-    }
-}
-
 .footer {
-    background: darkgray;
+    background: $s5;
 
     &__copyright {
-        max-width: 75rem;
+        max-width: $content-width;
         margin: 0 auto;
-        padding: .5rem 0 .5rem 1.25rem;
+        padding: .75em 1.25em .75em 1.25em;
+        font-size: 0.875rem;
     }
 }

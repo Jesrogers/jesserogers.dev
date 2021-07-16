@@ -1,3 +1,5 @@
+@import "vendor/normalize";
+
 @import "abstract/variables";
 @import "abstract/mixins";
 @import "abstract/utility";
@@ -5,7 +7,7 @@
 @import "base/base";
 @import "base/layouts";
 
-@import "pages/home";
+@import "components/project-card";
 
-@import "card";
-@import "nav";
+@import "pages/404";
+@import "pages/home";

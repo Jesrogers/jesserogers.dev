@@ -1,0 +1,23 @@
+.not-found {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-missing {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    transform: translateY(-40%);
+    text-align: center;
+
+    &__message {
+        margin-bottom: 1em;
+        color: $s7;
+    }
+
+    &__return {
+        @include button($color-secondary);
+    }
+}
